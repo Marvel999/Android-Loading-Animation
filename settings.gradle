@@ -1,0 +1,3 @@
+rootProject.name = "Loading Animation"
+include ':app'
+include ':LoadingAnimation'

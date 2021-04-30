@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LoadingAnimation">
+        <attr name="text" format="string"/>
+        <attr name="barType" format="reference"/>
+        <attr name="TextColor" format="color"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="enlarge" format="integer"/>
+    </declare-styleable>
+</resources>
