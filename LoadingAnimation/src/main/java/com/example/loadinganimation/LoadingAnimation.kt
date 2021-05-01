@@ -27,24 +27,24 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
     private val default_textSize: Float = 15F
 
 
-    private lateinit var mContext:Context ;
-    private lateinit var attrs:AttributeSet;
-    private var styleAttr:Int = 0;
+    private lateinit var mContext: Context;
+    private lateinit var attrs: AttributeSet;
+    private var styleAttr: Int = 0;
 
     private lateinit var drawableFile: Drawable
     private lateinit var bgprogress: View
     private lateinit var view: View
     private lateinit var tvMsg: TextView
-    private var costumeMsg=default_msgTextView
+    private var costumeMsg = default_msgTextView
     private var textColor = default_textColor
     private var enlarge = default_enlarge
     private var textSize: Float = default_textSize
-    private var boldText=false;
+    private var boldText = false;
 
     init {
-        mContext=context;
-        attrs=attributeSet;
-        styleAttr=0
+        mContext = context;
+        attrs = attributeSet;
+        styleAttr = 0
         this.view = this
         inflate(context, R.layout.layout, this);
         val arr = context.obtainStyledAttributes(attributeSet, R.styleable.LoadingAnimation)
@@ -55,9 +55,9 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
         context,
         attributes
     ) {
-        mContext=context;
-        attrs=attributes;
-        styleAttr=defStyle
+        mContext = context;
+        attrs = attributes;
+        styleAttr = defStyle
         var typedArray =
             context.obtainStyledAttributes(attributes, R.styleable.LoadingAnimation, defStyle, 0)
         initTypeArray(typedArray)
@@ -70,21 +70,21 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
 
 
     fun initTypeArray(typedArray: TypedArray) {
-       drawableFile= typedArray.getDrawable(R.styleable.LoadingAnimation_barType)!!
-        textSize=typedArray.getDimension(R.styleable.LoadingAnimation_textSize,default_textSize)
+        drawableFile = typedArray.getDrawable(R.styleable.LoadingAnimation_barType)!!
+        textSize = typedArray.getDimension(R.styleable.LoadingAnimation_textSize, default_textSize)
         textColor = typedArray.getColor(R.styleable.LoadingAnimation_textColor, default_textColor);
-        costumeMsg= typedArray.getString(R.styleable.LoadingAnimation_text).toString();
-        enlarge = typedArray.getInt(R.styleable.LoadingAnimation_enlarge,default_enlarge);
-        boldText = typedArray.getBoolean(R.styleable.LoadingAnimation_boldText,false);
+        costumeMsg = typedArray.getString(R.styleable.LoadingAnimation_text).toString();
+        enlarge = typedArray.getInt(R.styleable.LoadingAnimation_enlarge, default_enlarge);
+        boldText = typedArray.getBoolean(R.styleable.LoadingAnimation_boldText, false);
         imageView = findViewById(R.id.progressImg);
         bgprogress = findViewById(R.id.progBg);
         tvMsg = findViewById(R.id.textMsg);
 
-        if (drawableFile!=null){
+        if (drawableFile != null) {
             setProgressVector(drawableFile);
         }
 
-        if (costumeMsg!=null){
+        if (costumeMsg != null) {
             setTextMsg(costumeMsg);
         }
 
@@ -95,35 +95,34 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
         typedArray.recycle()
     }
 
-    fun setProgressVector(drawableFile: Drawable){
+    fun setProgressVector(drawableFile: Drawable) {
         Glide
             .with(mContext)
             .load(drawableFile)
             .into(imageView);
     }
 
-    fun setTextMsg(massage:String){
+    fun setTextMsg(massage: String) {
         tvMsg.setText(massage)
     }
-    fun setTextStyle(boldText:Boolean){
+
+    fun setTextStyle(boldText: Boolean) {
         if (boldText)
-        tvMsg.setTypeface(Typeface.DEFAULT_BOLD);
+            tvMsg.setTypeface(Typeface.DEFAULT_BOLD);
     }
 
-    fun setTextColor(textColor:Int){
+    fun setTextColor(textColor: Int) {
         tvMsg.setTextColor(textColor)
     }
 
-    fun setTextSize(textSize:Float){
-        tvMsg.textSize=textSize;
+    fun setTextSize(textSize: Float) {
+        tvMsg.textSize = textSize;
     }
 
-    fun setEnlarge(enlarge:Int){
-        if (enlarge>=1 && enlarge<=10 )
-            imageView.getLayoutParams().height = enlarge*100;
+    fun setEnlarge(enlarge: Int) {
+        if (enlarge >= 1 && enlarge <= 10)
+            imageView.getLayoutParams().height = enlarge * 100;
     }
-
-
 
 
 }

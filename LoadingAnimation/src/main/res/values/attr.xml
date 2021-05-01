@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="LoadingAnimation">
-        <attr name="text" format="string"/>
-        <attr name="barType" format="reference"/>
-        <attr name="textColor" format="color"/>
-        <attr name="textSize" format="dimension"/>
-        <attr name="enlarge" format="integer"/>
-        <attr name="boldText" format="boolean"/>
+<!--        Set text String-->
+        <attr name="text" format="string" />
+<!--         Set Loading GIF File Location-->
+        <attr name="barType" format="reference" />
+<!--        Set Color of text -->
+        <attr name="textColor" format="color" />
+<!--        Set textSize of textView-->
+        <attr name="textSize" format="dimension" />
+<!--        Increase size of image-->
+        <attr name="enlarge" format="integer" />
+<!--        Set TextView in Bold-->
+        <attr name="boldText" format="boolean" />
     </declare-styleable>
 </resources>

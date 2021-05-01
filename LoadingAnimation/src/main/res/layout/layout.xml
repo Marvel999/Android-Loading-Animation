@@ -8,8 +8,8 @@
         android:id="@+id/progBg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/white"
-        android:alpha="0"/>
+        android:alpha="0"
+        android:background="@android:color/white" />
 
     <ImageView
         android:id="@+id/progressImg"
@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/progressImg"
-        android:text="@string/please_wait"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="@string/please_wait" />
 
 </RelativeLayout>
