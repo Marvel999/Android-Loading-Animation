@@ -69,7 +69,7 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
 
     fun initTypeArray(typedArray: TypedArray) {
        drawableFile= typedArray.getDrawable(R.styleable.LoadingAnimation_barType)!!
-        textSize=typedArray.getFloat(R.styleable.LoadingAnimation_textSize,default_textSize)
+        textSize=typedArray.getDimension(R.styleable.LoadingAnimation_textSize,default_textSize)
         textColor = typedArray.getColor(R.styleable.LoadingAnimation_textColor, default_textColor);
         costumeMsg= typedArray.getString(R.styleable.LoadingAnimation_text).toString();
         enlarge = typedArray.getInt(R.styleable.LoadingAnimation_enlarge,default_enlarge);

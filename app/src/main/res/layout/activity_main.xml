@@ -11,6 +11,9 @@
         android:layout_height="match_parent"
         android:elevation="10dp"
         app:barType="@drawable/clock"
+        app:textSize="20sp"
+        app:textColor="@color/purple_500"
+        app:text="Please Wait"
         app:enlarge="5"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
