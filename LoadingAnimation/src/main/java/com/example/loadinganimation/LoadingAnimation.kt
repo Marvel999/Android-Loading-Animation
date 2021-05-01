@@ -34,11 +34,12 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
     private lateinit var bgprogress: View
     private lateinit var view: View
     private lateinit var tvMsg: TextView
-    private lateinit var costumeMsg: String
+    private var costumeMsg=default_msgTextView
     private var textColor = default_textColor
     private var enlarge = default_enlarge
     private var textSize: Float = default_textSize
-
+    private var width = 300f;
+    private var height = 3002f;
     init {
         mContext=context;
         attrs=attributeSet;
@@ -60,6 +61,20 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
             context.obtainStyledAttributes(attributes, R.styleable.LoadingAnimation, defStyle, 0)
         initTypeArray(typedArray)
         init()
+    }
+
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+        if(MeasureSpec.getMode(widthMeasureSpec)>0 && MeasureSpec.getMode(heightMeasureSpec)>0){
+            width = MeasureSpec.getSize(widthMeasureSpec).toFloat()
+//        Log.e("Width ",MeasureSpec.getMode(widthMeasureSpec).toString()+"height "+)
+            height = MeasureSpec.getSize(heightMeasureSpec).toFloat()
+        }else{
+            width=400f;
+            height=400f;
+        }
+
+        setMeasuredDimension(width.toInt(), height.toInt())
     }
 
 
@@ -91,7 +106,7 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
         typedArray.recycle()
     }
 
-    fun setProgressVector(drawableFile:Drawable){
+    fun setProgressVector(drawableFile: Drawable){
         Glide
             .with(mContext)
             .load(drawableFile)

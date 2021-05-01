@@ -7,13 +7,18 @@
     tools:context=".MainActivity">
 
     <com.example.loadinganimation.LoadingAnimation
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/loadinAnim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:elevation="10dp"
         app:barType="@drawable/clock"
-        app:textSize="20sp"
-        app:textColor="@color/purple_500"
+        app:enlarge="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:text="Please Wait"
-        app:enlarge="5"/>
+        app:textColor="@color/purple_500"
+        app:textSize="20sp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
