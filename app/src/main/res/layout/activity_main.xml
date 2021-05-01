@@ -6,17 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
         <com.example.loadinganimation.LoadingAnimation
             android:id="@+id/loadinAnim"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:elevation="10dp"
             app:barType="@drawable/clock"
             app:boldText="false"
@@ -25,136 +19,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:text="Please Wait"
             app:textColor="@color/purple_500"
             app:textSize="15sp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="5dp"
-        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.example.loadinganimation.LoadingAnimation
-            android:id="@+id/loadinAnim1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="10dp"
-            app:barType="@drawable/bouncy_balls"
-            app:boldText="false"
-            app:enlarge="2"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:text="Please Wait"
-            app:textColor="@color/purple_500"
-            app:textSize="15sp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.example.loadinganimation.LoadingAnimation
-            android:id="@+id/loadinAnim2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="10dp"
-            app:barType="@drawable/color_capsule"
-            app:boldText="false"
-            app:enlarge="2"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:text="Please Wait"
-            app:textColor="@color/purple_500"
-            app:textSize="15sp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-<!--// Second Row-->
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
-
-        <com.example.loadinganimation.LoadingAnimation
-            android:id="@+id/loadinAnim3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="10dp"
-            app:barType="@drawable/infinity_bar"
-            app:boldText="false"
-            app:enlarge="2"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:text="Please Wait"
-            app:textColor="@color/purple_500"
-            app:textSize="15sp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout3"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
-
-        <com.example.loadinganimation.LoadingAnimation
-            android:id="@+id/loadinAnim4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="10dp"
-            app:barType="@drawable/hour_glass"
-            app:boldText="false"
-            app:enlarge="2"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:text="Please Wait"
-            app:textColor="@color/purple_500"
-            app:textSize="15sp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
-
-        <com.example.loadinganimation.LoadingAnimation
-            android:id="@+id/loadinAnim5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="10dp"
-            app:barType="@drawable/fidget"
-            app:boldText="false"
-            app:enlarge="2"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:text="Please Wait"
-            app:textColor="@color/purple_500"
-            app:textSize="15sp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 
