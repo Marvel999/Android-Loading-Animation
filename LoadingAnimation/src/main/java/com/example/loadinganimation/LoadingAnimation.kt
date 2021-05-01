@@ -18,19 +18,17 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
     RelativeLayout(context, attributeSet) {
     private lateinit var imageView: ImageView;
 
-    @SuppressLint("UseCompatLoadingForDrawables")
-    private val default_DrawableFile = resources.getDrawable(R.drawable.clock)
-    private lateinit var default_Vgprogress: View
+// Set Default value
     private val default_msgTextView = "Please Wait..."
     private val default_textColor = Color.BLACK
     private val default_enlarge = 1
     private val default_textSize: Float = 15F
 
-
-    private lateinit var mContext: Context;
-    private lateinit var attrs: AttributeSet;
+// Set some attribute get form constructor
+    private var mContext: Context;
+    private var attrs: AttributeSet;
     private var styleAttr: Int = 0;
-
+// Create some instance
     private lateinit var drawableFile: Drawable
     private lateinit var bgprogress: View
     private lateinit var view: View
@@ -41,6 +39,7 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
     private var textSize: Float = default_textSize
     private var boldText = false;
 
+    // setting context and defult value get from primary constructor
     init {
         mContext = context;
         attrs = attributeSet;
@@ -51,6 +50,7 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
         initTypeArray(arr)
     }
 
+    // second constructor
     constructor(context: Context, attributes: AttributeSet, defStyle: Int) : this(
         context,
         attributes
@@ -61,14 +61,12 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
         var typedArray =
             context.obtainStyledAttributes(attributes, R.styleable.LoadingAnimation, defStyle, 0)
         initTypeArray(typedArray)
-        init()
     }
 
 
-    fun init() {
-    }
 
 
+//    Extracting Attribute form XML
     fun initTypeArray(typedArray: TypedArray) {
         drawableFile = typedArray.getDrawable(R.styleable.LoadingAnimation_barType)!!
         textSize = typedArray.getDimension(R.styleable.LoadingAnimation_textSize, default_textSize)
@@ -95,6 +93,7 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
         typedArray.recycle()
     }
 
+//    Set Gif on View
     fun setProgressVector(drawableFile: Drawable) {
         Glide
             .with(mContext)
@@ -102,23 +101,28 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
             .into(imageView);
     }
 
+//    Set Massage Text
     fun setTextMsg(massage: String) {
         tvMsg.setText(massage)
     }
 
+//    Set text Bold
     fun setTextStyle(boldText: Boolean) {
         if (boldText)
             tvMsg.setTypeface(Typeface.DEFAULT_BOLD);
     }
 
+//    Set TextColor
     fun setTextColor(textColor: Int) {
         tvMsg.setTextColor(textColor)
     }
 
+//    SetText Size
     fun setTextSize(textSize: Float) {
         tvMsg.textSize = textSize;
     }
 
+//    Enlarge the gif file
     fun setEnlarge(enlarge: Int) {
         if (enlarge >= 1 && enlarge <= 10)
             imageView.getLayoutParams().height = enlarge * 100;
