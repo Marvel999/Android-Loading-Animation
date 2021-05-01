@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.Color
+import android.graphics.Typeface
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.View
@@ -38,8 +39,8 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
     private var textColor = default_textColor
     private var enlarge = default_enlarge
     private var textSize: Float = default_textSize
-    private var width = 300f;
-    private var height = 3002f;
+    private var boldText=false;
+
     init {
         mContext=context;
         attrs=attributeSet;
@@ -63,20 +64,6 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
         init()
     }
 
-    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
-        if(MeasureSpec.getMode(widthMeasureSpec)>0 && MeasureSpec.getMode(heightMeasureSpec)>0){
-            width = MeasureSpec.getSize(widthMeasureSpec).toFloat()
-//        Log.e("Width ",MeasureSpec.getMode(widthMeasureSpec).toString()+"height "+)
-            height = MeasureSpec.getSize(heightMeasureSpec).toFloat()
-        }else{
-            width=400f;
-            height=400f;
-        }
-
-        setMeasuredDimension(width.toInt(), height.toInt())
-    }
-
 
     fun init() {
     }
@@ -88,6 +75,7 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
         textColor = typedArray.getColor(R.styleable.LoadingAnimation_textColor, default_textColor);
         costumeMsg= typedArray.getString(R.styleable.LoadingAnimation_text).toString();
         enlarge = typedArray.getInt(R.styleable.LoadingAnimation_enlarge,default_enlarge);
+        boldText = typedArray.getBoolean(R.styleable.LoadingAnimation_boldText,false);
         imageView = findViewById(R.id.progressImg);
         bgprogress = findViewById(R.id.progBg);
         tvMsg = findViewById(R.id.textMsg);
@@ -103,6 +91,7 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
         setTextColor(textColor);
         setTextSize(textSize);
         setEnlarge(enlarge);
+        setTextStyle(boldText);
         typedArray.recycle()
     }
 
@@ -115,6 +104,10 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
 
     fun setTextMsg(massage:String){
         tvMsg.setText(massage)
+    }
+    fun setTextStyle(boldText:Boolean){
+        if (boldText)
+        tvMsg.setTypeface(Typeface.DEFAULT_BOLD);
     }
 
     fun setTextColor(textColor:Int){
