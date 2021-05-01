@@ -3,7 +3,7 @@
     <declare-styleable name="LoadingAnimation">
         <attr name="text" format="string"/>
         <attr name="barType" format="reference"/>
-        <attr name="TextColor" format="color"/>
+        <attr name="textColor" format="color"/>
         <attr name="textSize" format="dimension"/>
         <attr name="enlarge" format="integer"/>
     </declare-styleable>
