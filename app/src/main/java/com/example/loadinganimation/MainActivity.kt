@@ -1,7 +1,9 @@
 package com.example.loadinganimation
 
+import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 
@@ -11,6 +13,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.black_loading_anim)
         FullScreencall();
+        val loadingAnim=findViewById<LoadingAnimation>(R.id.loadinAnim);
+
+        loadingAnim.setProgressVector(resources.getDrawable(R.drawable.black_three_dot_circle))
+        loadingAnim.setTextViewVisibility(true)
+        loadingAnim.setTextStyle(true)
+        loadingAnim.setTextColor(Color.YELLOW)
+        loadingAnim.setTextSize(12F)
+        loadingAnim.setTextMsg("Please Wait")
+        loadingAnim.setEnlarge(5)
+
+
 
     }
 

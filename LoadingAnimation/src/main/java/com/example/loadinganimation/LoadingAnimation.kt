@@ -68,7 +68,7 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
 
 
 //    Extracting Attribute form XML
-    fun initTypeArray(typedArray: TypedArray) {
+   private fun initTypeArray(typedArray: TypedArray) {
         drawableFile = typedArray.getDrawable(R.styleable.LoadingAnimation_barType)!!
         textSize = typedArray.getDimension(R.styleable.LoadingAnimation_textSize, default_textSize)
         textColor = typedArray.getColor(R.styleable.LoadingAnimation_textColor, default_textColor);
