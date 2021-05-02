@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+     tools:context=".MainActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="horizontal">
+
+    <com.example.loadinganimation.LoadingAnimation
+        android:id="@+id/loadinAnim"
+        android:layout_width="130dp"
+        android:layout_height="match_parent"
+        android:elevation="10dp"
+        app:barType="@drawable/jelly_belly"
+        app:boldText="false"
+        app:enlarge="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:textColor="@color/purple_500"
+        app:textSize="15sp" />
+
+    <com.example.loadinganimation.LoadingAnimation
+        android:layout_width="130dp"
+        android:layout_height="match_parent"
+        android:elevation="10dp"
+        app:barType="@drawable/loading_anim"
+        app:boldText="false"
+        app:enlarge="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:textColor="@color/purple_500"
+        app:textSize="15sp" />
+
+    <com.example.loadinganimation.LoadingAnimation
+        android:layout_width="130dp"
+        android:layout_height="match_parent"
+        android:elevation="10dp"
+        app:barType="@drawable/rainbow_ring"
+        app:boldText="false"
+        app:enlarge="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:textColor="@color/purple_500"
+        app:textSize="15sp" />
+</LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal">
+
+        <com.example.loadinganimation.LoadingAnimation
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:elevation="10dp"
+            app:barType="@drawable/rollround"
+            app:boldText="false"
+            app:enlarge="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:textColor="@color/purple_500"
+            app:textSize="15sp" />
+
+        <com.example.loadinganimation.LoadingAnimation
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:elevation="10dp"
+            app:barType="@drawable/triad_ring"
+            app:boldText="false"
+            app:enlarge="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:textColor="@color/purple_500"
+            app:textSize="15sp" />
+
+           <com.example.loadinganimation.LoadingAnimation
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:elevation="10dp"
+            app:barType="@drawable/black_water"
+            app:boldText="false"
+            app:enlarge="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:textColor="@color/purple_500"
+            app:textSize="15sp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

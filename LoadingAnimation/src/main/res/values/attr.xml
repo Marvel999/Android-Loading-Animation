@@ -13,5 +13,7 @@
         <attr name="enlarge" format="integer" />
 <!--        Set TextView in Bold-->
         <attr name="boldText" format="boolean" />
+<!--        Set Visibility of TextView -->
+        <attr name="isVisible" format="boolean" />
     </declare-styleable>
 </resources>

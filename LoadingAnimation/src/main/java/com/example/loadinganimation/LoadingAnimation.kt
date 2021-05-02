@@ -38,6 +38,7 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
     private var enlarge = default_enlarge
     private var textSize: Float = default_textSize
     private var boldText = false;
+    private var isVisible = false;
 
     // setting context and defult value get from primary constructor
     init {
@@ -74,6 +75,7 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
         costumeMsg = typedArray.getString(R.styleable.LoadingAnimation_text).toString();
         enlarge = typedArray.getInt(R.styleable.LoadingAnimation_enlarge, default_enlarge);
         boldText = typedArray.getBoolean(R.styleable.LoadingAnimation_boldText, false);
+        isVisible = typedArray.getBoolean(R.styleable.LoadingAnimation_isVisible, false);
         imageView = findViewById(R.id.progressImg);
         bgprogress = findViewById(R.id.progBg);
         tvMsg = findViewById(R.id.textMsg);
@@ -90,6 +92,7 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
         setTextSize(textSize);
         setEnlarge(enlarge);
         setTextStyle(boldText);
+        setTextViewVisibility(isVisible)
         typedArray.recycle()
     }
 
@@ -126,6 +129,14 @@ class LoadingAnimation(context: Context, attributeSet: AttributeSet) :
     fun setEnlarge(enlarge: Int) {
         if (enlarge >= 1 && enlarge <= 10)
             imageView.getLayoutParams().height = enlarge * 100;
+    }
+
+//    Set TextView visibility
+    fun setTextViewVisibility(isVisible:Boolean){
+        if (isVisible)
+            tvMsg.visibility=View.VISIBLE
+        else
+            tvMsg.visibility=View.GONE
     }
 
 

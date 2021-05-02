@@ -8,14 +8,14 @@ import android.view.View
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        val loadinAnim=findViewById<LoadingAnimation>(R.id.loadinAnim);
-        loadinAnim.setProgressVector(resources.getDrawable(R.drawable.fidget));
-        loadinAnim.setTextStyle(true)
-        Handler().postDelayed(
-            {
-            loadinAnim.visibility= View.GONE;
-            },2000
-        )
+        setContentView(R.layout.black_loading_anim)
+//        val loadinAnim=findViewById<LoadingAnimation>(R.id.Loa);
+//        loadinAnim.setProgressVector(resources.getDrawable(R.drawable.fidget));
+//        loadinAnim.setTextStyle(true)
+//        Handler().postDelayed(
+//            {
+//            loadinAnim.visibility= View.GONE;
+//            },2000
+//        )
     }
 }
