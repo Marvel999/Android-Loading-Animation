@@ -18,10 +18,6 @@ Create Cool Adroid Loading Animation in a simple way.
   <img src="https://user-images.githubusercontent.com/43094705/116810846-a697a480-ab63-11eb-8d4e-b705cd16ff41.png">
 </p>
  
- <p align="center">
-Cool Android Loading Animation.
-</p>
-
 </br>
 
 
