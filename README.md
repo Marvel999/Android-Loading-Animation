@@ -42,7 +42,7 @@ Add the dependency
 
 dependencies {
     ...
-    implementation 'com.github.Marvel999:Arc-Progressbar-lib:1.0.0'
+    implementation 'com.github.Marvel999:Android-Loading-Animation:1.0.0'
 }
 ```
 
