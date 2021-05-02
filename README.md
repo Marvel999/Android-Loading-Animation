@@ -97,6 +97,24 @@ Kotlin
         loadingAnim.setEnlarge(5)
 ```
 
+Animation
+-----
+
+Animation Name | Preview
+------------     |   -------------
+RotatingPlane    | <img src='' alt='RotatingPlane' width="90px" height="90px"/>
+DoubleBounce     | <img src='' alt='DoubleBounce' width="90px" height="90px"/>
+Wave             | <img src='' alt='Wave' width="90px" height="90px"/>
+WanderingCubes   | <img src='' alt='WanderingCubes' width="90px" height="90px"/>
+Pulse            | <img src='' alt='Pulse' width="90px" height="90px"/>
+ChasingDots      | <img src='' alt='ChasingDots' width="90px" height="90px"/>
+ThreeBounce      | <img src='' alt='ThreeBounce' width="90px" height="90px"/>
+Circle           | <img src='' alt='Circle' width="90px" height="90px"/>
+CubeGrid         | <img src='' alt='CubeGrid' width="90px" height="90px"/>
+FadingCircle     | <img src='' alt='FadingCircle' width="90px" height="90px"/>
+FoldingCube      | <img src='' alt='FoldingCube' width="90px" height="90px"/>
+RotatingCircle   | <img src='' alt='RotatingCircle' width="90px" height="90px"/>
+
 ## How to contribute?
 
 1. Fork the repository 
