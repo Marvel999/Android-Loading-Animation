@@ -1,7 +1,7 @@
 <h1 align="center">Android Loading Animation</h1>
 
 <p align="center">
-Create Cool Adroid Loading Animation in a simple way.
+Create Cool Android Loading Animation in a simple way.
 </p>
 </br>
 <p align="center">
