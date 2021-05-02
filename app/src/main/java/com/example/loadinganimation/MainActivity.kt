@@ -1,21 +1,29 @@
 package com.example.loadinganimation
 
-import androidx.appcompat.app.AppCompatActivity
+import android.os.Build
 import android.os.Bundle
-import android.os.Handler
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.black_loading_anim)
-//        val loadinAnim=findViewById<LoadingAnimation>(R.id.Loa);
-//        loadinAnim.setProgressVector(resources.getDrawable(R.drawable.fidget));
-//        loadinAnim.setTextStyle(true)
-//        Handler().postDelayed(
-//            {
-//            loadinAnim.visibility= View.GONE;
-//            },2000
-//        )
+        FullScreencall();
+
+    }
+
+    fun FullScreencall() {
+        if (Build.VERSION.SDK_INT > 11 && Build.VERSION.SDK_INT < 19) { // lower api
+            val v = this.window.decorView
+            v.systemUiVisibility = View.GONE
+        } else if (Build.VERSION.SDK_INT >= 19) {
+            //for new api versions.
+            val decorView = window.decorView
+            val uiOptions =
+                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+            decorView.systemUiVisibility = uiOptions
+        }
     }
 }
