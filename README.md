@@ -73,7 +73,7 @@ You may use the following properties in your XML to change your Loading Animatio
 #####Properties:
 
 
-/* Arc progressbar xml */
+/*Loading Animation xml */
 
 * app:barType          -> To get animation gif file
 * app:text             -> To add text below animation
