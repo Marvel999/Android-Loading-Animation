@@ -58,12 +58,12 @@ XML
 
        <com.example.loadinganimation.LoadingAnimation
         android:id="@+id/loadingAnim"
-        android:layout_width="130dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:elevation="10dp"
         app:barType="@drawable/clock"
         app:boldText="false"
-        app:enlarge="2"
+        app:enlarge="5"
         app:textColor="@color/purple_500"
         app:textSize="15sp" />
 
