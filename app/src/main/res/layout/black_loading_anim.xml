@@ -16,7 +16,7 @@
 
     <com.example.loadinganimation.LoadingAnimation
         android:id="@+id/loadinAnim"
-        android:layout_width="match_parent"
+        android:layout_width="130dp"
         android:layout_height="match_parent"
         android:elevation="10dp"
         app:barType="@drawable/drop_anim"

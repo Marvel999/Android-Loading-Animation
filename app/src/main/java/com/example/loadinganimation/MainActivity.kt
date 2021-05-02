@@ -13,15 +13,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.black_loading_anim)
         FullScreencall();
-        val loadingAnim=findViewById<LoadingAnimation>(R.id.loadinAnim);
+//        val loadingAnim=findViewById<LoadingAnimation>(R.id.loadinAnim);
 
-        loadingAnim.setProgressVector(resources.getDrawable(R.drawable.black_three_dot_circle))
-        loadingAnim.setTextViewVisibility(true)
-        loadingAnim.setTextStyle(true)
-        loadingAnim.setTextColor(Color.YELLOW)
-        loadingAnim.setTextSize(12F)
-        loadingAnim.setTextMsg("Please Wait")
-        loadingAnim.setEnlarge(5)
+//        loadingAnim.setProgressVector(resources.getDrawable(R.drawable.black_three_dot_circle))
+//        loadingAnim.setTextViewVisibility(true)
+//        loadingAnim.setTextStyle(true)
+//        loadingAnim.setTextColor(Color.YELLOW)
+//        loadingAnim.setTextSize(12F)
+//        loadingAnim.setTextMsg("Please Wait")
+//        loadingAnim.setEnlarge(5)
 
 
 
