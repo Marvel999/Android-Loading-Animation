@@ -24,7 +24,7 @@ Create Cool Android Loading Animation in a simple way.
 
 USAGE
 -----
-To make a cool Loading animation in android by easy way. This Library is help devloper to implement cool android Loading animation in easiest way.
+This Library will help developer to implement Cool Android Loading Animation in easiest way.
 First Screen | Second Screen | Third Screen
 ------------     |   ------------- | ------------- 
 <img src='https://user-images.githubusercontent.com/43094705/116815014-37c54600-ab79-11eb-8a05-df58fbcfb8a3.gif' alt='Loading' width="220px" height="450px"/> | <img src='https://user-images.githubusercontent.com/43094705/116815027-4ad81600-ab79-11eb-8b13-d4aaf2620197.gif' alt='Loading' width="220px" height="450px"/> | <img src='https://user-images.githubusercontent.com/43094705/116815273-61cb3800-ab7a-11eb-919e-1c2f24c57081.gif' alt='Loading' width="220px" height="450px"/>
@@ -68,7 +68,7 @@ XML
         app:textSize="15sp" />
 
 ```
-You may use the following properties in your XML to change your ArcProgressbar.
+You may use the following properties in your XML to change your Loading Animation.
 
 #####Properties:
 
